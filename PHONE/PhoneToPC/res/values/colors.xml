@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  
+  <color name="bg_color">#EDEDED</color>
+  <color name="contents_text">#ff000000</color>
+  <color name="encode_view">#ffffffff</color>
+  <color name="help_button_view">#ffcccccc</color>
+  <color name="help_view">#ff404040</color>
+  <color name="possible_result_points">#c0ffff00</color>  
+  <color name="result_image_border">#ffffffff</color>
+  <color name="result_minor_text">#ffc0c0c0</color>
+  <color name="result_points">#c000ff00</color>
+  <color name="result_text">#ffffffff</color>
+  <color name="result_view">#b0000000</color>
+  <color name="sbc_header_text">#ff808080</color>
+  <color name="sbc_header_view">#ffffffff</color>
+  <color name="sbc_list_item">#fffff0e0</color>
+  <color name="sbc_layout_view">#ffffffff</color>
+  <color name="sbc_page_number_text">#ff000000</color>
+  <color name="sbc_snippet_text">#ff4b4b4b</color>
+  <color name="share_text">#ff000000</color>
+  <color name="share_view">#ffffffff</color>
+  <color name="status_view">#50000000</color>
+  <color name="status_text">#ffffffff</color>
+  <color name="transparent">#00000000</color>
+  <color name="viewfinder_frame">#ff000000</color>
+  <color name="viewfinder_laser">#ffff0000</color>
+  <color name="viewfinder_mask">#60000000</color>
+  <color name="header">#58567D</color>
+  <color name="grgray">#686868</color>
+      
+  <color name="candidate_normal">#FF000000</color>
+  <color name="candidate_recommended">#FFE35900</color>
+  <color name="candidate_other">#ff808080</color>
+  <color name="candidate_background">#bbffffff</color>
+  
+   <!-- xutao -->
+   <color name="background">#FFF2F2F2</color>
+   <color name="transaction">#00000000</color>
+   <color name="title_color">#FF222222</color>
+   <color name="black">#FF000000</color>
+   <color name="white">#FFFFFFFF</color>
+   <color name="red">#FFFF0000</color>
+   <color name="gray">#FFDDDDDD</color>
+   <color name="d_gray">#FF888888</color>
+   <color name="blackdn">#88888888</color>
+   <color name="openness">#00FFFFFF</color>
+   <!-- <color name="viewfinder_frame">#FFFFFFFF</color>
+   <color name="viewfinder_laser">#ffff0000</color>
+   <color name="viewfinder_mask">#80000000</color>
+   <color name="result_view">#b0000000</color>
+   <color name="possible_result_points">#c0ffff00</color> -->
+  
+</resources>

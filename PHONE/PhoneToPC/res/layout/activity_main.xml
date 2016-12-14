@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.example.phonetopc.MainActivity" >
+
+    <include layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner_nobg"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_method"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/first_method_des"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner_nobg"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/second_method"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/round_corner_gray"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IP :"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_size" />
+
+                    <TextView
+                        android:id="@+id/second_wifi_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/connect_state_non"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/second_wifi_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/little_size" />
+
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_corner_nobg"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thrid_method"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+                    <RadioGroup 
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        
+                        <RadioButton 
+                            android:id="@+id/radio_miracast"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/miracast_connect"/>
+                        
+                        <RadioButton 
+                            android:id="@+id/radio_wifidirect"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifiDirect"/>
+                        
+                        
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/linear_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/display_setting"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_equement"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/content_size" />
+
+                        <Button
+                            android:id="@+id/second_scan_button"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_scanning"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/content_size" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/three_lastest_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/three_lastest_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/mircase_lastest" />
+
+                        <TextView
+                            android:id="@+id/three_lastest_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/three_lastest_l"
+                            android:text="test" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/choice"
+                            android:textSize="@dimen/little_size" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <!-- 快速连接 -->
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:background="@drawable/round_corner_nobg"
+                android:orientation="vertical"
+                >
+                
+                <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/four_method"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_size"
+                    android:textStyle="bold"/>
+                
+                <com.phoneToPc.MyListView
+                    android:id="@+id/myListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_corner_nobg"
+                    />
+                
+                
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

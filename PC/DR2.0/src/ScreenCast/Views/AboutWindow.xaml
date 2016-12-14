@@ -1,0 +1,31 @@
+﻿<Window x:Class="ScreenCast.Views.AboutWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:controls="clr-namespace:ScreenCast.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      
+        Background="{x:Null}"
+        mc:Ignorable="d" 
+        WindowStyle="None" 
+        MouseLeftButtonDown="AboutWindow_OnMouseLeftButtonDown"
+        Title="{DynamicResource AppFullName}" 
+        Width="422" 
+        Height="322"  
+        AllowsTransparency="True"  
+        WindowStartupLocation="CenterScreen">
+
+
+
+    <Grid >
+        
+        <Image Source="/Images/AboutMe.png"  />
+        <!--WebBrowser Name="webBrowser" Source="http://www.baidu.com" Margin="10,0,10,10"  Visibility="Visible" Width="300" Height="200"/-->
+        <controls:ImageButton Style="{StaticResource ButtonMinClose}"  HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19"   Margin="0,10,15,0" Click="OnAboutExitClick"/>
+        <TextBlock Margin="112,126,116,160" Text="{DynamicResource DrVersions}" FontSize="16" Foreground="OrangeRed" FontWeight="Bold"/>
+        <TextBlock Margin="112,60,28,226" Text="{DynamicResource AppFullName}" FontSize="24" Foreground="Gray" />
+
+        <Image Source="/Images/appicon.png" Width="47" Height="47" Margin="38,50,333,221" />
+    </Grid>
+</Window>

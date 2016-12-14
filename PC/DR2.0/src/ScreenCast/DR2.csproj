@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB728C4B-5790-455A-9EBF-4058B2BC8097}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScreenCast</RootNamespace>
+    <AssemblyName>ScreenCast</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>ScreenCast.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="zxing">
+      <HintPath>..\zxingnet4.5\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="Client\DataManager.cs" />
+    <Compile Include="Client\ProcessData.cs" />
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Controls\ImageButton.cs" />
+    <Compile Include="DR2API.cs" />
+    <Compile Include="KeyboardHook.cs" />
+    <Compile Include="keylisten.cs" />
+    <Compile Include="Models\Environment.cs" />
+    <Compile Include="Models\IniFile.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ViewModels\SplashViewModel.cs" />
+    <Compile Include="Views\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Connecting.xaml.cs">
+      <DependentUpon>Connecting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FloatingToolBars.xaml.cs">
+      <DependentUpon>FloatingToolBars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WindowHelp.xaml.cs">
+      <DependentUpon>WindowHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Resizer.cs" />
+    <Compile Include="Views\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPlayer.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\PhoneViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\PcView.xaml.cs">
+      <DependentUpon>PcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhoneView.xaml.cs">
+      <DependentUpon>PhoneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPlayerForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\VideoPlayerHost.cs" />
+    <Page Include="Lang\en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Lang\Zh-cn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Connecting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FloatingToolBars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WindowHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\PcView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PhoneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VideoPlayerForm.resx">
+      <DependentUpon>VideoPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainview_bk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pc_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blackbtn1.png" />
+    <Resource Include="Images\blackbtn2.png" />
+    <Resource Include="Images\blackbtn3.png" />
+    <Resource Include="Images\blackbtn4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\connecting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wait_connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\progress.png" />
+    <Resource Include="Images\progress2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\phone_bottom.png" />
+    <Resource Include="Images\phone_left.png" />
+    <Resource Include="Images\phone_leftbottom.png" />
+    <Resource Include="Images\phone_lefttop.png" />
+    <Resource Include="Images\phone_right.png" />
+    <Resource Include="Images\phone_rightbottom.png" />
+    <Resource Include="Images\phone_righttop.png" />
+    <Resource Include="Images\phone_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutButton1.png" />
+    <Resource Include="Images\AboutButton2.png" />
+    <Resource Include="Images\AboutButton3.png" />
+    <Resource Include="Images\AboutButton4.png" />
+    <Resource Include="Images\CloseButton1.png" />
+    <Resource Include="Images\CloseButton2.png" />
+    <Resource Include="Images\CloseButton3.png" />
+    <Resource Include="Images\CloseButton4.png" />
+    <Resource Include="Images\HelpButton1.png" />
+    <Resource Include="Images\HelpButton2.png" />
+    <Resource Include="Images\HelpButton3.png" />
+    <Resource Include="Images\HelpButton4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bc1.png" />
+    <Resource Include="Images\bc2.png" />
+    <Resource Include="Images\bc3.png" />
+    <Resource Include="Images\bc4.png" />
+    <Resource Include="Images\dc1.png" />
+    <Resource Include="Images\dc2.png" />
+    <Resource Include="Images\dc3.png" />
+    <Resource Include="Images\dc4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnabout1.png" />
+    <Resource Include="Images\btnabout2.png" />
+    <Resource Include="Images\btnabout3.png" />
+    <Resource Include="Images\btnabout4.png" />
+    <Resource Include="Images\btnclose1.png" />
+    <Resource Include="Images\btnclose2.png" />
+    <Resource Include="Images\btnclose3.png" />
+    <Resource Include="Images\btnclose4.png" />
+    <Resource Include="Images\btnmin1.png" />
+    <Resource Include="Images\btnmin2.png" />
+    <Resource Include="Images\btnmin3.png" />
+    <Resource Include="Images\btnmin4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnmax1.png" />
+    <Resource Include="Images\btnmax2.png" />
+    <Resource Include="Images\btnmax3.png" />
+    <Resource Include="Images\btnmax4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HelpButtonMin1.png" />
+    <Resource Include="Images\HelpButtonMin2.png" />
+    <Resource Include="Images\HelpButtonMin3.png" />
+    <Resource Include="Images\HelpButtonMin4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bthelp1.png" />
+    <Resource Include="Images\bthelp2.png" />
+    <Resource Include="Images\bthelp3.png" />
+    <Resource Include="Images\bthelp4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutMe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnmincl1.png" />
+    <Resource Include="Images\btnmincl2.png" />
+    <Resource Include="Images\btnmincl3.png" />
+    <Resource Include="Images\btnmincl4.png" />
+    <Resource Include="Images\btnminj1.png" />
+    <Resource Include="Images\btnminj2.png" />
+    <Resource Include="Images\btnminj3.png" />
+    <Resource Include="Images\btnminj4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\appicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\titleLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnmincd1.png" />
+    <Resource Include="Images\btnmincd2.png" />
+    <Resource Include="Images\btnmincd3.png" />
+    <Resource Include="Images\btnmincd4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnMenu1.png" />
+    <Resource Include="Images\btnMenu2.png" />
+    <Resource Include="Images\btnMenu3.png" />
+    <Resource Include="Images\btnMenu4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PageOne1.png" />
+    <Resource Include="Images\PageOne2.png" />
+    <Resource Include="Images\PageOne3.png" />
+    <Resource Include="Images\PageOne4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wait_connect_phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutMenuHelp1.png" />
+    <Resource Include="Images\AboutMenuHelp2.png" />
+    <Resource Include="Images\AboutMenuHelp3.png" />
+    <Resource Include="Images\AboutMenuHelp4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PageConnecterr.png" />
+    <Resource Include="Images\PageConnecting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PageBtnClick1.png" />
+    <Resource Include="Images\PageBtnClick2.png" />
+    <Resource Include="Images\PageBtnClick3.png" />
+    <Resource Include="Images\PageBtnClick4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="app128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PCTOPC.png" />
+    <Resource Include="Images\PhoneToPC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WindowHelp.png" />
+    <Resource Include="Images\WindowHelpWH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BlueCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PageConnecterr_err.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ButtonLeft.png" />
+    <Resource Include="Images\ButtonNull.png" />
+    <Resource Include="Images\ButtonRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\number2.png" />
+    <Resource Include="Images\number3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\number1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PCTOPC_EN.png" />
+    <Resource Include="Images\PhoneToPC_EN.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

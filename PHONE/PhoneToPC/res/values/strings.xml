@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <string name="app_name">PhoneToPC</string>
+    <string name="quit_app">退出程序</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Title for Latin keyboard  -->
+    <string name="ime_name">lenovo alpha 键盘</string>
+
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+    
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+
+    <!-- Labels for subtype -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="label_subtype_en_GB">English (GB)</string>
+
+    <!-- Titles for ImePreference -->
+    <string name="settings_name">lenovo Soft Keyboard Settings</string>
+    <string name="language_selection_title">Input languages</string>
+    <string name="select_language">Select input languages</string>
+    <string name="general_category">General</string>
+    
+    <!-- xutao -->
+    <string name="action_settings">设置</string>
+    <string name="connect_state">连接状态</string>
+    <string name="connect_state_non">未连接</string>
+    <string name="connect_state_on">已连接</string>
+    <string name="first_method">连接方式一.USB连接</string>
+    <string name="second_method">连接方式二.WiFi连接</string>
+    <string name="thrid_method">连接方式三.点对点连接</string>
+    <string name="four_method">连接方式四.快速连接</string>
+    <string name="miracast_connect">MiraCast连接</string>
+    <string name="wifiDirect">WiFiDirect连接</string>
+    <string name="first_method_des">(通过USB连接线与电脑连接)</string>
+    <string name="second_method_des"><Data><![CDATA[PC端请在<font color="#ffaa00"><b>同一WiFi网络中</b></font>通过IP连接手机]]></Data></string>
+    <string name="scan_two_code">扫描二维码连接</string>
+    <string name="start_scanning">扫描二维码</string>
+    <string name="select_equement">选择设备</string>
+    <string name="mircase_lastest">最近连接设备:</string>
+    <string name="setting_security">安全设置</string>
+    <string name="setting_security_des">通过其它手机或电脑连接当前手机时，需要（至少选择一项）</string>
+    <string name="setting_message">消息设置</string>
+    <string name="setting_message_des">启用消息服务、消息通知可被推送至电脑</string>
+    <string name="setting_control">控制设置</string>
+    <string name="setting_control_des">当其它手机或电脑通过WiFi连接到当前手机时，允许：</string>
+    <string name="choice">选择</string>
+	
+    <string name="config_message">通知确认</string>
+    <string name="config_message_des">勾选后可接收连接通知</string>
+    <string name="config_password">密码验证</string>
+    <string name="message_set">设置消息服务</string>
+    <string name="message_set_non">服务尚未激活</string>
+    
+    <string name="scan_des">请将二维码放入扫描码框内，即可扫描</string>
+    
+    <string name="control_look_screen">查看屏幕</string>
+    <string name="control_total_control">完全控制</string>
+	<string name="about_phonetopc">关于PhoneToPC</string>
+    
+</resources>

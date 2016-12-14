@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>phone to pc</title>
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="static/text/js.js"></script>
+    <script type="text/javascript" src="static/text/jquery.min.js"></script>
+    <script type="text/javascript" src="static/text/jquery.qrcode.min.js"></script>
+    <link rel="stylesheet" href="static/css/css.css"/>
+
+
+   <!--清楚浏览器缓存，防止占用内存过高-->
+   <meta http-equiv="pragma" content="no-cache"  />
+   <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+   <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+
+</head>
+<body onload="init()">
+
+    <div id = "frame">
+        <div id = "scriptionTitle"> phone to pc</div>
+	<div id = "canvasDiv">
+	    <!--canvas标签-->
+
+	    
+	    <canvas id="myCanvas" width="360" height="640">
+	    Your browser does not support the HTML5 canvas tag.
+	    </canvas>
+	    
+
+	    <!--直接使用img标签-->
+	    <!--
+	    <img width="360" height="640"src="static/img/test.png" id="img" />
+	    -->
+	</div>
+	<!--
+	<script type="text/javascript">
+                refreshPic();
+        </script>
+	-->
+        <!--
+        <div id= videoDiv>
+            <video controls="controls" id="videoControl">
+                <source src="static/video/movie.mp4" type="video/mp4" />
+                <source src="static/video/movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        -->
+        <div id="qrcode" style=""></div>
+
+
+        <script type="text/javascript">
+
+        	$('#qrcode').qrcode("{{qcode_context}}");
+           
+        </script>
+    </div>
+
+    <script>
+            saveqcodeContext("{{qcode_context}}");
+            connectStateEventTriger();
+    </script>
+</body>
+<!--
+<script type="text/javascript">
+//function convertImageToCanvas(url)
+//{	
+	var canvas = document.getElementById("myCanvas");
+	if (!canvas.getContext) 
+        {
+	    //return;
+	}
+	var ctx = canvas.getContext("2d");
+
+	//report the mouse position on click 
+	 canvas.addEventListener("click", function (evt) { 
+           var mousePos = getPointOnCanvas(canvas, evt);
+	   var x=parseInt(mousePos.x);
+	   var y=parseInt(mousePos.y);
+ 	   console.log('input_window:' , evt.clientX +','+ evt.clientY);
+           console.log('input_canvas:' , mousePos.x +','+ mousePos.y); 
+	   console.log('input_canvas_parseInt:' , x +','+ y); 
+	   alert(x +',' +y); 
+	 }, false); 
+
+        //Get Mouse Position 
+        function getPointOnCanvas(canvas, evt) { 
+	   var rect = canvas.getBoundingClientRect(); 
+	   return { 
+	     x: evt.clientX - rect.left * (canvas.width / rect.width),
+	     y: evt.clientY - rect.top * (canvas.height / rect.height)
+	   }
+	 }
+
+	
+	var image = new Image();
+
+	image.onload = function() {
+	    	     
+	    if (image.width != canvas.width) {
+		canvas.width = image.width;
+	    }
+
+	    if (image.height != canvas.height) {
+		canvas.height = image.height;
+	    }
+	    // canvas清屏
+	    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	    ctx.drawImage(image, 0, 0);
+
+	}
+
+	// 设置src属性，浏览器会自动加载。
+	// 记住必须先绑定事件，才能设置src属性，否则会出同步问题。
+	image.src = "static/img/test.png";
+//	image.src = url;
+//}
+	
+
+</script>
+-->
+</html>

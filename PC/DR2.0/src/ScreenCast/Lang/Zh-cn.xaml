@@ -1,0 +1,96 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<system:String x:Key="DrVersions">V2.0.2.8</system:String>
+    <system:String x:Key="AppFullName">无线同屏</system:String>
+    
+    <system:String x:Key="WaitingForConnect">等待连接......</system:String>
+    <system:String x:Key="HowToConnect">如何连接</system:String>
+    <system:String x:Key="AboutConnect">关于</system:String>
+    <system:String x:Key="CloseConnect">关闭</system:String>
+    <system:String x:Key="Connecting">正在连接中......</system:String>
+    <system:String x:Key="Disconnect">断开连接</system:String>
+    <system:String x:Key="Instructment">手机无需安装软件, 轻松实现电脑玩手机!</system:String>
+    <system:String x:Key="AppName">ScreenCast</system:String>
+    <system:String x:Key="Exit">退出</system:String>
+    <system:String x:Key="ShowFirstPage">自启动时显示引导页</system:String>
+    <system:String x:Key="NoShow">不再显示</system:String>
+    <system:String x:Key="NowShow">立即体验</system:String>
+    <system:String x:Key="ShowNormal">显示窗口</system:String>
+    <system:String x:Key="ExitBack">返回</system:String>
+    <system:String x:Key="AboutMe">关于</system:String>
+
+    <system:String x:Key="MenuAboutMe">关于</system:String>
+    <system:String x:Key="MenuHelp">帮助</system:String>
+    <system:String x:Key="MenuStartFirstPage">自启动时显示引导页</system:String>
+    <system:String x:Key="MenuStartWenOpen">开机时自动启动</system:String>
+
+
+
+    <system:String x:Key="PageConnectText1">随时无线连接</system:String>
+    <system:String x:Key="PageConnectText2">享受同屏生活</system:String>
+    
+
+    <system:String x:Key="PageConnectDisconnect">断开连接</system:String>
+    <system:String x:Key="PageConnectBackToSplash">返回引导页</system:String>
+
+
+
+
+    <system:String x:Key="HelpClick">如何投屏</system:String>
+    <system:String x:Key="CloseClick">断开</system:String>
+    <system:String x:Key="CallStateText">打开手机进行投屏吧</system:String>
+    <system:String x:Key="DisConnectText">正在连接......</system:String>
+    <system:String x:Key="StartWhenOpen">开机时自动启动</system:String>
+    
+    <system:String x:Key="Step1PcString">请在您想要投屏的设备上打开投屏功能(仅支持win10设备)</system:String>
+    <system:String x:Key="Step1PhoneString">请在您想要投屏的设备上打开投屏功能(仅支持win10及Android 4.2以上设备)</system:String>
+    <system:String x:Key="Step2">在搜索列表中选择设备 :</system:String>
+    <system:String x:Key="Step3">连接并开始投屏</system:String>
+
+
+    <system:String x:Key="StepExample">例:手机"MOTO X"的无线投屏路径 : </system:String>
+    <system:String x:Key="StepMoreExample">更多机型帮助</system:String>
+
+
+    <system:String x:Key="KeyErrorStateTextNull" >""</system:String>
+    <system:String x:Key="KeyErrorStateTextNormal">打开手机进行投屏吧</system:String>
+    <system:String x:Key="KeyErrorStateTextOuttime">因为超时断开连接, 请确认无线信号是否正常, 并尝试重新连接.</system:String>
+    <system:String x:Key="KeyErrorStateTextMYdisconnect">设备连接已被用户断开, 如需投屏, 请重新连接.</system:String>
+    <system:String x:Key="WifiError">网卡初始化失败！</system:String>
+    <system:String x:Key="WifiWaring">警告</system:String>
+  
+
+
+
+
+
+    <system:String x:Key="KeyError13">数据无效.</system:String>
+    <system:String x:Key="KeyError31">由于连到系统上的设备没有发挥作用,请确认设备正常工作.</system:String>
+    <system:String x:Key="KeyError87">由于参数错误, 导致链接失败 , 请确认参数是否正确.</system:String>
+    <system:String x:Key="KeyError1062">由于服务尚未启动, 请确认服务是否打开.</system:String>
+    <system:String x:Key="KeyError1460">因为超时断开连接, 请确认无线信号是否正常, 并尝试重新连接.</system:String>
+	<system:String x:Key="KeyErrordefault">连接失败, 请重新连接</system:String>
+
+    <system:String x:Key="WindowHelp1">更多帮助</system:String>
+    <system:String x:Key="WindowHelp2">不同类型的手机打开连接的方法各有不同, 以下一些手机，仅供参考：</system:String>
+    <system:String x:Key="WindowHelp3">联想K900: 设置->显示->投射屏幕 </system:String>
+    <system:String x:Key="WindowHelp4">Moto X: 设置->显示->投射屏幕</system:String>
+    <system:String x:Key="WindowHelp5">小米2: 设置->更多无线连接->无线显示->开启无线显示</system:String>
+    <system:String x:Key="WindowHelp6">三星GT-N7108: 下拉菜单->通知面板->屏幕共享</system:String>
+    <system:String x:Key="WindowHelp7">华为P7: 下拉菜单->通知面板->多屏互动</system:String>
+    <system:String x:Key="WindowHelp8">根据设备型号不同, 投屏功能的路径和名称稍有区别, 请根据自己设备的具体情况查找功能</system:String>
+
+	
+	<system:String x:Key="Text1">1.打开系统设置</system:String>
+    <system:String x:Key="Text2">2.选择显示</system:String>
+    <system:String x:Key="Text3">3.选择投射屏幕</system:String>
+    <system:String x:Key="Text4">4.选择设备名称进行连接</system:String>
+
+
+
+    <system:String x:Key="Text5">1.快捷键 “win+p”</system:String>
+    <system:String x:Key="Text6">2.选择“连接到无线显示器”</system:String>
+    <system:String x:Key="Text7">3.搜索列表</system:String>
+
+</ResourceDictionary>

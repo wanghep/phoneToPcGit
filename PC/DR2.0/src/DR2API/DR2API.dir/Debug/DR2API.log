@@ -1,0 +1,99 @@
+﻿Build started 2015/8/18 16:30:52.
+     1>Project "D:\Work\DR2.0 newcode\src\DR2API\DR2API.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D USEWINDOW /D "CMAKE_INTDIR=\"Debug\"" /D DR2API_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"DR2API.dir\Debug\\" /Fd"DR2API.dir\Debug\vc120.pdb" /Gd /TP /errorReport:prompt dllmain.cpp stdafx.cpp udptcp.cpp WfdSources.cpp WfdStringFormat.cpp
+         dllmain.cpp
+     1>d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(2106): warning C4005: 'CheckPointer' : macro redefinition
+                 d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(336) : see previous definition of 'CheckPointer'
+     1>dllmain.cpp(191): warning C4244: '=' : conversion from 'double' to 'LONG', possible loss of data
+     1>dllmain.cpp(192): warning C4244: '=' : conversion from 'double' to 'LONG', possible loss of data
+     1>dllmain.cpp(193): warning C4244: '=' : conversion from 'double' to 'LONG', possible loss of data
+     1>dllmain.cpp(194): warning C4244: '=' : conversion from 'double' to 'LONG', possible loss of data
+         stdafx.cpp
+         udptcp.cpp
+     1>d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(2106): warning C4005: 'CheckPointer' : macro redefinition
+                 d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(336) : see previous definition of 'CheckPointer'
+     1>udptcp.cpp(149): warning C4129: '%' : unrecognized character escape sequence
+     1>udptcp.cpp(1410): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>udptcp.cpp(2322): warning C4018: '>' : signed/unsigned mismatch
+     1>udptcp.cpp(2324): warning C4018: '>' : signed/unsigned mismatch
+     1>udptcp.cpp(2327): warning C4101: 'rtDD' : unreferenced local variable
+     1>udptcp.cpp(3392): warning C4018: '>' : signed/unsigned mismatch
+     1>udptcp.cpp(4558): warning C4129: '%' : unrecognized character escape sequence
+     1>udptcp.cpp(4694): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850) : see declaration of 'inet_addr'
+     1>udptcp.cpp(4771): warning C4244: 'initializing' : conversion from 'SOCKET' to 'INT', possible loss of data
+     1>udptcp.cpp(4838): warning C4244: 'initializing' : conversion from 'SOCKET' to 'INT', possible loss of data
+     1>udptcp.cpp(4883): warning C4244: 'initializing' : conversion from 'SOCKET' to 'INT', possible loss of data
+     1>udptcp.cpp(4904): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2238) : see declaration of 'gethostbyname'
+     1>udptcp.cpp(4906): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1868) : see declaration of 'inet_ntoa'
+     1>udptcp.cpp(4973): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2238) : see declaration of 'gethostbyname'
+         WfdSources.cpp
+     1>d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(2106): warning C4005: 'CheckPointer' : macro redefinition
+                 d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(336) : see previous definition of 'CheckPointer'
+     1>WfdSources.cpp(547): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdSources.cpp(548): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdSources.cpp(624): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(640): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(678): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(691): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(724): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(751): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(842): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(861): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(871): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(892): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(902): warning C4267: '=' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(922): warning C4267: 'initializing' : conversion from 'size_t' to 'long', possible loss of data
+     1>WfdSources.cpp(1896): warning C4018: '<' : signed/unsigned mismatch
+     1>WfdSources.cpp(1899): warning C4018: '<' : signed/unsigned mismatch
+     1>WfdSources.cpp(2195): warning C4101: 'uRTSPPort' : unreferenced local variable
+         WfdStringFormat.cpp
+     1>d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(2106): warning C4005: 'CheckPointer' : macro redefinition
+                 d:\work\dr2.0 newcode\src\dr2api\./udptcp.h(336) : see previous definition of 'CheckPointer'
+     1>WfdStringFormat.cpp(91): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(111): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(884): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(894): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(924): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(937): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(966): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(984): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(999): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1014): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1029): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1044): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1066): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1078): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1115): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1128): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1144): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1156): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1172): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1185): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1202): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1215): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1233): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>WfdStringFormat.cpp(1246): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1259): warning C4172: returning address of local variable or temporary
+     1>WfdStringFormat.cpp(1278): warning C4172: returning address of local variable or temporary
+         Generating Code...
+     1>d:\work\dr2.0 newcode\src\dr2api\udptcp.cpp(1366): warning C4715: 'api_releasebuf' : not all control paths return a value
+     1>d:\work\dr2.0 newcode\src\dr2api\udptcp.cpp(1356): warning C4715: 'api_addrefbuf' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\bin\Debug\DR2API.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\..\libs/x64 /LIBPATH:..\..\libs/x64/Debug /LIBPATH:..\..\lib\Debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib WiFiDisplay.lib wlanapi.lib ws2_32.lib Ws2_32.lib netapi32.lib /DEF:"./RD2API.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/CodeZL/wifidirect/bin/Debug/DR2API.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/CodeZL/wifidirect/bin/Debug/DR2API.lib" /MACHINE:X64  /machine:x64 /debug /DLL DR2API.dir\Debug\dllmain.obj
+         DR2API.dir\Debug\stdafx.obj
+         DR2API.dir\Debug\udptcp.obj
+         DR2API.dir\Debug\WfdSources.obj
+         DR2API.dir\Debug\WfdStringFormat.obj
+            Creating library D:/CodeZL/wifidirect/bin/Debug/DR2API.lib and object D:/CodeZL/wifidirect/bin/Debug/DR2API.exp
+     1>DR2API.exp : warning LNK4070: /OUT:wdfdll.dll directive in .EXP differs from output filename '..\..\bin\Debug\DR2API.dll'; ignoring directive
+         DR2API.vcxproj -> D:\Work\DR2.0 newcode\src\DR2API\..\..\bin\Debug\DR2API.dll
+     1>Done Building Project "D:\Work\DR2.0 newcode\src\DR2API\DR2API.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.23

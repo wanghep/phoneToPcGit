@@ -1,0 +1,426 @@
+﻿<Application x:Class="ScreenCast.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:ScreenCast.Controls" 
+             ShutdownMode="OnExplicitShutdown"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ScreenCast;component/Lang/Zh-cn.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type controls:ImageButton}" x:Key="ImageButtonBase">
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Padding" Value="0,2" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type controls:ImageButton}">
+                            <Grid Name="aaa">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgNormal"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgHover"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgPush"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgDisable"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgNormal"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgHover"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgPush"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgDisable"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgNormal"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgHover"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgPush"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgDisable"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Disabled">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgNormal"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgHover"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgPush"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Collapsed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="imgDisable"
+                                                                       Storyboard.TargetProperty="(UIElement.Visibility)" Duration="0">
+                                                    <DiscreteObjectKeyFrame KeyTime="00:00:00"
+                                                                    Value="{x:Static Visibility.Visible}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup x:Name="FocusStates">
+                                        <VisualState x:Name="Focused">
+                                            <Storyboard>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Unfocused" />
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Grid x:Name="grid">
+                                    <Image Name="imgNormal" Source="{TemplateBinding NormalImage}" Visibility="Visible"
+                                   Stretch="Uniform" />
+                                    <Image Name="imgHover" Source="{TemplateBinding HoverImage}" Visibility="Collapsed"
+                                   Stretch="Uniform" />
+                                    <Image Name="imgPush" Source="{TemplateBinding PushImage}" Visibility="Collapsed"
+                                   Stretch="Uniform" />
+                                    <Image Name="imgDisable" Source="{TemplateBinding DisableImage}" Visibility="Collapsed"
+                                   Stretch="Uniform" />
+                                </Grid>
+                                <ContentPresenter x:Name="contentPresenter"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}" />
+                                <Rectangle x:Name="FocusVisualElement" IsHitTestVisible="false" Margin="1" Opacity="0"
+                                   RadiusY="2" RadiusX="2" Stroke="#FF6DBDD1" StrokeThickness="1" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonPageRight">
+                <Setter Property="Width" Value="95" />
+                <Setter Property="Height" Value="123" />
+                <Setter Property="NormalImage" Value="Images/ButtonNull.png" />
+                <Setter Property="HoverImage" Value="Images/ButtonRight.png" />
+                <Setter Property="PushImage" Value="Images/ButtonNull.png" />
+                <Setter Property="DisableImage" Value="Images/ButtonRight.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonPageLeft">
+                <Setter Property="Width" Value="95" />
+                <Setter Property="Height" Value="123" />
+                <Setter Property="NormalImage" Value="Images/ButtonNull.png" />
+                <Setter Property="HoverImage" Value="Images/ButtonLeft.png" />
+                <Setter Property="PushImage" Value="Images/ButtonNull.png" />
+                <Setter Property="DisableImage" Value="Images/ButtonLeft.png" />
+            </Style>
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="BlackImageButton">
+                <Setter Property="Width" Value="101" />
+                <Setter Property="Height" Value="37" />
+                <Setter Property="NormalImage" Value="Images/blackbtn1.png" />
+                <Setter Property="HoverImage" Value="Images/blackbtn2.png" />
+                <Setter Property="PushImage" Value="Images/blackbtn3.png" />
+                <Setter Property="DisableImage" Value="Images/blackbtn4.png" />
+            </Style>
+
+
+            
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="PageBtnClick">
+                <Setter Property="Width" Value="127" />
+                <Setter Property="Height" Value="47" />
+                <Setter Property="NormalImage" Value="Images/PageBtnClick2.png" />
+                <Setter Property="HoverImage" Value="Images/PageBtnClick2.png" />
+                <Setter Property="PushImage" Value="Images/PageBtnClick2.png" />
+                <Setter Property="DisableImage" Value="Images/PageBtnClick2.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMenuHelp">
+                <Setter Property="Width" Value="155" />
+                <Setter Property="Height" Value="36" />
+                <Setter Property="NormalImage" Value="Images/AboutMenuHelp1.png" />
+                <Setter Property="HoverImage" Value="Images/AboutMenuHelp2.png" />
+                <Setter Property="PushImage" Value="Images/AboutMenuHelp3.png" />
+                <Setter Property="DisableImage" Value="Images/AboutMenuHelp4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMenuAbout">
+                <Setter Property="Width" Value="155" />
+                <Setter Property="Height" Value="36" />
+                <Setter Property="NormalImage" Value="Images/AboutMenuHelp1.png" />
+                <Setter Property="HoverImage" Value="Images/AboutMenuHelp2.png" />
+                <Setter Property="PushImage" Value="Images/AboutMenuHelp3.png" />
+                <Setter Property="DisableImage" Value="Images/AboutMenuHelp4.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonAboutMenuHelpBlue">
+                <Setter Property="Width" Value="102" />
+                <Setter Property="Height" Value="28" />
+                <Setter Property="NormalImage" Value="Images/AboutMenuHelp2.png" />
+                <Setter Property="HoverImage" Value="Images/AboutMenuHelp2.png" />
+                <Setter Property="PushImage" Value="Images/AboutMenuHelp2.png" />
+                <Setter Property="DisableImage" Value="Images/AboutMenuHelp2.png" />
+            </Style>
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="HelpButton">
+                <Setter Property="Width" Value="63" />
+                <Setter Property="Height" Value="63" />
+                <Setter Property="NormalImage" Value="Images/HelpButton1.png" />
+                <Setter Property="HoverImage" Value="Images/HelpButton2.png" />
+                <Setter Property="PushImage" Value="Images/HelpButton3.png" />
+                <Setter Property="DisableImage" Value="Images/HelpButton4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="CloseButton">
+                <Setter Property="Width" Value="63" />
+                <Setter Property="Height" Value="63" />
+                <Setter Property="NormalImage" Value="Images/CloseButton1.png" />
+                <Setter Property="HoverImage" Value="Images/CloseButton2.png" />
+                <Setter Property="PushImage" Value="Images/CloseButton3.png" />
+                <Setter Property="DisableImage" Value="Images/CloseButton4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="DiconnectButton">
+                <Setter Property="Width" Value="63" />
+                <Setter Property="Height" Value="63" />
+                <Setter Property="NormalImage" Value="Images/dc1.png" />
+                <Setter Property="HoverImage" Value="Images/dc2.png" />
+                <Setter Property="PushImage" Value="Images/dc3.png" />
+                <Setter Property="DisableImage" Value="Images/dc4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="BackButton">
+                <Setter Property="Width" Value="63" />
+                <Setter Property="Height" Value="63" />
+                <Setter Property="NormalImage" Value="Images/bc1.png" />
+                <Setter Property="HoverImage" Value="Images/bc2.png" />
+                <Setter Property="PushImage" Value="Images/bc3.png" />
+                <Setter Property="DisableImage" Value="Images/bc4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="AboutButton">
+                <Setter Property="Width" Value="63" />
+                <Setter Property="Height" Value="63" />
+                <Setter Property="NormalImage" Value="Images/AboutButton1.png" />
+                <Setter Property="HoverImage" Value="Images/AboutButton2.png" />
+                <Setter Property="PushImage" Value="Images/AboutButton3.png" />
+                <Setter Property="DisableImage" Value="Images/AboutButton4.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinAbout">
+                <Setter Property="Width" Value="19" />
+                <Setter Property="Height" Value="19" />
+                <Setter Property="NormalImage" Value="Images/btnabout1.png" />
+                <Setter Property="HoverImage" Value="Images/btnabout2.png" />
+                <Setter Property="PushImage" Value="Images/btnabout3.png" />
+                <Setter Property="DisableImage" Value="Images/btnabout4.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinMin">
+                <Setter Property="Width" Value="25" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="NormalImage" Value="Images/btnmin1.png" />
+                <Setter Property="HoverImage" Value="Images/btnmin2.png" />
+                <Setter Property="PushImage" Value="Images/btnmin3.png" />
+                <Setter Property="DisableImage" Value="Images/btnmin4.png" />
+            </Style>
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinClose">
+                <Setter Property="Width" Value="25" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="NormalImage" Value="Images/btnclose1.png" />
+                <Setter Property="HoverImage" Value="Images/btnclose2.png" />
+                <Setter Property="PushImage" Value="Images/btnclose3.png" />
+                <Setter Property="DisableImage" Value="Images/btnclose4.png" />
+            </Style>
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinHelp">
+                <Setter Property="Width" Value="19" />
+                <Setter Property="Height" Value="19" />
+                <Setter Property="NormalImage" Value="Images/HelpButtonMin1.png" />
+                <Setter Property="HoverImage" Value="Images/HelpButtonMin2.png" />
+                <Setter Property="PushImage" Value="Images/HelpButtonMin3.png" />
+                <Setter Property="DisableImage" Value="Images/HelpButtonMin4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMainMenu">
+                <Setter Property="Width" Value="25" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="NormalImage" Value="Images/btnMenu1.png" />
+                <Setter Property="HoverImage" Value="Images/btnMenu2.png" />
+                <Setter Property="PushImage" Value="Images/btnMenu3.png" />
+                <Setter Property="DisableImage" Value="Images/btnMenu4.png" />
+            </Style>
+
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMainPageCheckGrey">
+                <Setter Property="Width" Value="25" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="NormalImage" Value="Images/PageOne1.png" />
+                <Setter Property="HoverImage" Value="Images/PageOne1.png" />
+                <Setter Property="PushImage" Value="Images/PageOne1.png" />
+                <Setter Property="DisableImage" Value="Images/PageOne1.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMainPageCheckBlue">
+                <Setter Property="Width" Value="25" />
+                <Setter Property="Height" Value="25" />
+                <Setter Property="NormalImage" Value="Images/PageOne2.png" />
+                <Setter Property="HoverImage" Value="Images/PageOne2.png" />
+                <Setter Property="PushImage" Value="Images/PageOne2.png" />
+                <Setter Property="DisableImage" Value="Images/PageOne2.png" />
+            </Style>
+            
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinMax">
+                <Setter Property="Width" Value="24" />
+                <Setter Property="Height" Value="24" />
+                <Setter Property="NormalImage" Value="Images/btnmax1.png" />
+                <Setter Property="HoverImage" Value="Images/btnmax2.png" />
+                <Setter Property="PushImage" Value="Images/btnmax3.png" />
+                <Setter Property="DisableImage" Value="Images/btnmax4.png" />
+            </Style>
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinMin2">
+                <Setter Property="Width" Value="24" />
+                <Setter Property="Height" Value="24" />
+                <Setter Property="NormalImage" Value="Images/btnminj1.png" />
+                <Setter Property="HoverImage" Value="Images/btnminj2.png" />
+                <Setter Property="PushImage" Value="Images/btnminj3.png" />
+                <Setter Property="DisableImage" Value="Images/btnminj4.png" />
+            </Style>
+
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinClose2">
+                <Setter Property="Width" Value="24" />
+                <Setter Property="Height" Value="24" />
+                <Setter Property="NormalImage" Value="Images/btnmincl1.png" />
+                <Setter Property="HoverImage" Value="Images/btnmincl2.png" />
+                <Setter Property="PushImage" Value="Images/btnmincl3.png" />
+                <Setter Property="DisableImage" Value="Images/btnmincl4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonMinMenu">
+                <Setter Property="Width" Value="24" />
+                <Setter Property="Height" Value="24" />
+                <Setter Property="NormalImage" Value="Images/btnmincd1.png" />
+                <Setter Property="HoverImage" Value="Images/btnmincd2.png" />
+                <Setter Property="PushImage" Value="Images/btnmincd3.png" />
+                <Setter Property="DisableImage" Value="Images/btnmincd4.png" />
+            </Style>
+
+            <Style TargetType="controls:ImageButton" BasedOn="{StaticResource ImageButtonBase}" x:Key="ButtonBB">
+                <Setter Property="Width" Value="85" />
+                <Setter Property="Height" Value="30" />
+                <Setter Property="NormalImage" Value="Images/bthelp1.png" />
+                <Setter Property="HoverImage" Value="Images/bthelp2.png" />
+                <Setter Property="PushImage" Value="Images/bthelp3.png" />
+                <Setter Property="DisableImage" Value="Images/bthelp4.png" />
+            </Style>
+
+
+
+            <ControlTemplate x:Key="CloseButtonTemplate" TargetType="{x:Type Button}">
+                <Grid Name="Button" Background="#00000000">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="HoverState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                                    <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Duration="0" To="#FF373A3D" />
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="PressedState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                                    <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" Duration="0" To="#FFB9B9B9" />
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" Duration="0" To="0.5" />
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <!--<Border Name="HoverState" Background="#FFFFFFFF" BorderBrush="#FFB9B9B9" BorderThickness="1" Opacity="0" />-->
+                    <!--<Border Name="PressedState" Background="#FFF0F0F0" BorderBrush="#FFB9B9B9" BorderThickness="1" Opacity="0" />-->
+                    <Border Name="HoverState"  BorderThickness="1" Opacity="0" />
+                    <Border Name="PressedState"  BorderThickness="1" Opacity="0" />
+                    <Grid Name="Glyph" Width="7" Height="7">
+                        <Path Name="Path" Stretch="Fill" Fill="#FFB9B9B9" Data="F1M375,309L376,309 379,312 382,309 383,309 383,310 380,313 383,316 383,317 382,317 379,314 376,317 375,317 375,316 378,313 375,310 375,309z" />
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

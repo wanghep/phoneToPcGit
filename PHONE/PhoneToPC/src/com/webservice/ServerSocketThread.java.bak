@@ -1,0 +1,61 @@
+package com.webservice;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.phoneToPc.MainActivity;
+
+
+public class ServerSocketThread implements Runnable {
+	
+	private String TAG = "ServerSocketThread";
+	public static Boolean ServerSocketThreadFlag = false;
+	private ServerSocket serverSocket;
+	private final int SERVER_PORT = 8888;
+	private ThreadReadWriterIOSocket rwiosocket = null;
+	private Context context;
+	
+	public void setContext(Context context){
+		this.context = context;
+		for(int i=0;i<100;i++){
+			Log.d("WWWWW", "Context = "+this.context);
+		}
+	}
+	
+	public void run() {
+		try {
+			serverSocket = null;
+			serverSocket = new ServerSocket(SERVER_PORT);
+			ServerSocketThreadFlag = true;
+			while (ServerSocketThreadFlag) {
+				/*MainActivity.GetActivityInstance().showSocket(
+				"wait socket connect ... ");
+				Log.d(TAG, "socket wait client connect ... ");*/
+				// 接受客户端请求
+				Socket client = serverSocket.accept();
+				MainActivity.GetActivityInstance().showSocket(
+				"socket connect success !");
+				Log.d(TAG, "socket connect success !");
+				rwiosocket = new ThreadReadWriterIOSocket(client);
+				new Thread(rwiosocket).start();
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				if (serverSocket != null) {
+					serverSocket.close();
+					Log.d(TAG, "---->  serverSocket closed.");
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}	
+}

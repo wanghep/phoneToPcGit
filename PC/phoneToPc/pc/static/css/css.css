@@ -1,0 +1,41 @@
+body{
+    background-color:gray
+}
+
+#frame {
+    margin:0 auto;		/* 居中 这个是必须的,其它的属性非必须 */
+    margin-top: 20px;
+    height:500px
+    width:500px;		/* 给个宽度 顶到浏览器的两边就看不出居中效果了 */
+}
+#scriptionTitle {
+    color: #ffffff;
+    font-size:25pt;
+    font-weight:bold;
+    margin:0 auto;		/* 居中 这个是必须的,其它的属性非必须 */
+    width:500px;		/* 给个宽度 顶到浏览器的两边就看不出居中效果了 */
+    /*text-align:center; 	*//* 文字等内容居中 */
+}
+#canvasDiv {
+    margin-top: 10px;
+    width:700px;
+    height:650px;
+    margin:0 auto;
+    display:none
+
+}
+/*
+#videoDiv {
+    margin-top: 10px;
+    width:600px;
+    height:400px;
+    margin:0 auto;
+    display:none
+
+}
+*/
+#qrcode {
+    margin:0 auto;		/* 居中 这个是必须的,其它的属性非必须 */
+    margin-top: 10px;
+    width:500px;		/* 给个宽度 顶到浏览器的两边就看不出居中效果了 */
+}

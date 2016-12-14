@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="DrVersions">V2.0.2.8</system:String>
+    <system:String x:Key="AppFullName">ScreenCast</system:String>
+
+    <system:String x:Key="WaitingForConnect">WaitForConnect......</system:String>
+    <system:String x:Key="HowToConnect">How to connect</system:String>
+    <system:String x:Key="AboutConnect">about</system:String>
+    <system:String x:Key="CloseConnect">close</system:String>
+    <system:String x:Key="Connecting">connecting...</system:String>
+    <system:String x:Key="Disconnect">disconnect</system:String>
+    <system:String x:Key="Instructment">手机无需安装软件, 轻松实现电脑玩手机!</system:String>
+    <system:String x:Key="AppName">ScreenCast</system:String>
+    <system:String x:Key="Exit">Exit</system:String>
+    <system:String x:Key="ShowFirstPage">show first page when next start</system:String>
+    <system:String x:Key="NoShow">do not show any more</system:String>
+    <system:String x:Key="NowShow">Experience immediately</system:String>
+    <system:String x:Key="ShowNormal">Display window</system:String>
+    <system:String x:Key="ExitBack">back</system:String>
+    <system:String x:Key="AboutMe">about</system:String>
+
+    <system:String x:Key="MenuAboutMe">about</system:String>
+    <system:String x:Key="MenuHelp">help</system:String>
+    <system:String x:Key="MenuStartFirstPage">Since the show guide page when it is started</system:String>
+    <system:String x:Key="MenuStartWenOpen">Start automatically when the phone is switched on</system:String>
+
+
+
+    <system:String x:Key="PageConnectText1">Wireless connection at any time</system:String>
+    <system:String x:Key="PageConnectText2">Enjoy life with the screen</system:String>
+
+
+    <system:String x:Key="PageConnectDisconnect">disconnect</system:String>
+    <system:String x:Key="PageConnectBackToSplash">Return to guide page</system:String>
+
+
+
+
+    <system:String x:Key="HelpClick">How to cast screen</system:String>
+    <system:String x:Key="CloseClick">disconnect</system:String>
+    <system:String x:Key="CallStateText">Open for mobile phone screen</system:String>
+    <system:String x:Key="DisConnectText">Are connected......</system:String>
+    <system:String x:Key="StartWhenOpen">Boot from the rev.</system:String>
+
+
+    <system:String x:Key="Step1PcString">Please if you want to screen devices open shots screen function (support win10 equipment only)</system:String>
+    <system:String x:Key="Step1PhoneString">Please if you want to screen devices open shots screen function (support win10 equipment only)</system:String>
+    <system:String x:Key="Step2">In the search list, select equipment</system:String>
+    <system:String x:Key="Step3">Connection and start screen</system:String>
+
+
+    <system:String x:Key="StepExample">Example: mobile phone "MOTO X" wireless cast spell</system:String>
+    <system:String x:Key="StepMoreExample">More models help</system:String>
+
+
+    <system:String x:Key="KeyErrorStateTextNull" >""</system:String>
+    <system:String x:Key="KeyErrorStateTextNormal">Open for mobile phone screen</system:String>
+    <system:String x:Key="KeyErrorStateTextOuttime">Disconnected because timeout, please make sure the wireless network is disconnected。</system:String>
+    <system:String x:Key="KeyErrorStateTextMYdisconnect">Device that connects users has been disconnected...Reconnection press process execution。</system:String>
+    <system:String x:Key="WifiError">Network card initialization failed！</system:String>
+    <system:String x:Key="WifiWaring">warning</system:String>
+
+
+
+
+
+
+    <system:String x:Key="KeyError13">The data is invalid.</system:String>
+    <system:String x:Key="KeyError31">Due to the equipment connected to the system did not work, please make sure the equipment to work normally.</system:String>
+    <system:String x:Key="KeyError87">Due to the parameter error, cause the failure of links, please make sure the parameters are correct.</system:String>
+    <system:String x:Key="KeyError1062">Because the service has not yet started, please make sure the service is on.</system:String>
+    <system:String x:Key="KeyError1460">Disconnected because timeout, please make sure the wireless network is disconnected.</system:String>
+
+
+    <system:String x:Key="WindowHelp1">More help</system:String>
+    <system:String x:Key="WindowHelp2">Different types of mobile phone to open the connection method is different, here are some mobile phones, are for reference only：</system:String>
+    <system:String x:Key="WindowHelp3">Lenovo K900: Settings - > display - > projection screen</system:String>
+    <system:String x:Key="WindowHelp4">Moto X: Settings - > display - > projection screen</system:String>
+    <system:String x:Key="WindowHelp5">Millet 2: mobile phones - > Settings - > more wireless connections - > wireless display - > open wireless display - > connection</system:String>
+    <system:String x:Key="WindowHelp6">Samsung GT - N7108: mobile phone - > menu - > notification panel - > screen sharing - > connection</system:String>
+    <system:String x:Key="WindowHelp7">P7: huawei mobile phones - > menu - > notification panel - > screen more interactive - > connection</system:String>
+    <system:String x:Key="WindowHelp8">According to equipment model is different, cast the path and name of slightly different screen function, lookup please according to their own devices and the circumstances</system:String>
+
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,62 @@
+﻿<Window x:Class="ScreenCast.Views.Connecting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:controls="clr-namespace:ScreenCast.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d"
+
+        Background="{x:Null}" 
+        SnapsToDevicePixels="True" 
+        
+        Icon="{Binding AppIcon}"
+       
+            Title="{DynamicResource AppName}"
+        Height="400" 
+        Width="720" 
+        AllowsTransparency="True" 
+        WindowStyle="None" 
+        WindowStartupLocation="CenterScreen"
+
+        >
+
+
+    <Window.Resources>
+        <Storyboard RepeatBehavior="Forever" x:Key="Storyboard">
+            <DoubleAnimation Storyboard.TargetName="Img2" Storyboard.TargetProperty="Opacity" Duration="0:0:1" To="-1" BeginTime="0:0:0"/>
+            <DoubleAnimation Storyboard.TargetName="Img2" Storyboard.TargetProperty="Opacity" Duration="0:0:1" To="1" BeginTime="0:0:0.500"/>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+
+        <Canvas Name="connecting" Visibility="Visible">
+            <Image Source="/Images/PageConnecting.png"  Stretch="Uniform" Canvas.Left="0" Canvas.Top="0" Width="720" Height="400"/>
+            <TextBlock FontSize="16" Foreground="Gray" Text="{StaticResource AppFullName}" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.444" Canvas.Left="49" Canvas.Top="19" Height="30" Width="358" />
+            <Image Source="/Images/appicon.png" Width="30" Height="30" Canvas.Left="15" Canvas.Top="14" />
+
+            <controls:ImageButton Style="{StaticResource BlackImageButton}" Command="{Binding DisconnectCommand}" Content="{DynamicResource PageConnectDisconnect}" Foreground="White" FontSize="16" Canvas.Left="555" Canvas.Top="337"/>
+            <TextBlock FontSize="17" Foreground="Black" Text="{DynamicResource DisConnectText}" HorizontalAlignment="Center"  RenderTransformOrigin="0.5,0.444" Canvas.Left="327" Canvas.Top="289" Height="40" Width="302"/>
+        </Canvas>
+
+        <Canvas Name="connecterr" Visibility="Visible" d:IsHidden="True" >
+            <Image Source="/Images/PageConnecterr.png"  Stretch="Uniform" Canvas.Left="0" Canvas.Top="0" Width="720" Height="400"/>
+            <TextBlock FontSize="16" Foreground="Gray" Text="{StaticResource AppFullName}" HorizontalAlignment="Center" Grid.Row="2" RenderTransformOrigin="0.5,0.444" Canvas.Left="49" Canvas.Top="19" Height="30" Width="358" />
+            <Image Source="/Images/appicon.png" Width="30" Height="30" Canvas.Left="15" Canvas.Top="14" />
+
+
+            <controls:ImageButton Style="{StaticResource BlackImageButton}" Command="{Binding BackToSplash}" Content="{DynamicResource PageConnectBackToSplash}" Foreground="White" FontSize="16" Canvas.Left="555" Canvas.Top="337"/>
+
+
+        </Canvas>
+
+        <controls:ImageButton Style="{StaticResource ButtonMainMenu}"  Command="{Binding AboutMenuCommand}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,14,78,0"  />
+        <controls:ImageButton Style="{StaticResource ButtonMinMin}" Command="{Binding OnMinClickMin}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,14,45,0"  Click="OnMinClickMin"/>
+        <controls:ImageButton Style="{StaticResource ButtonMinClose}" Command="{Binding ClickMinExit}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,14,12,0"   RenderTransformOrigin="2.579,0.316"/>
+
+      
+
+    </Grid>
+</Window>

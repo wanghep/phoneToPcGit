@@ -1,0 +1,21 @@
+LIBRARY wdfdll
+EXPORTS
+	DR2_Create
+	DR2_Destroy
+	DR2_Start
+	DR2_Stop
+	DR2_Draw
+	DR2_SetDrawWnd
+	DR2_SetFullscreen
+	DR2_SetWndChanging
+	DR2_Click
+	DR2_OnText
+	DR2_OnMouseLeftButtonDown
+	DR2_OnMouseLeftButtonUp
+	DR2_OnMouseMove
+	DR2_OnMouseRightButtonDown
+	DR2_OnMouseRightButtonUp
+	DR2_GetISQP
+	DR2_test
+	DR2_GetDrawRect
+	DR2_registSocketFun
